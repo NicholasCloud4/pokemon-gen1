@@ -3,11 +3,18 @@ import PokemonInfo from "./components/PokemonInfo";
 import pokedex from "./pokedex.json";
 import "./App.css";
 import Search from "./components/Search";
+import { useState } from "react";
 
 function App() {
-  //console.log(pokedex);
 
-  const pokedexMap = pokedex.map((pokemon) => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredPokedex = pokedex.filter((pokemon) => {
+    return pokemon.name.english.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+
+
+  const pokedexMap = filteredPokedex.map((pokemon) => {
     return (
       <PokemonInfo
         key={pokemon.id}
@@ -22,7 +29,7 @@ function App() {
   return (
     <>
       <Header />
-      <Search />
+      <Search onSearch={setSearchQuery} />
       <div className={"pokemon-grid"}>
         {pokedexMap}
       </div>
