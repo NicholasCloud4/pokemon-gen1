@@ -1,0 +1,81 @@
+.card {
+    width: 300px;
+    /* Consistent card width */
+    background: #f4f9ff;
+    /* Soft sky blue background */
+    border: 2px solid #b3d7ff;
+    /* Light blue border for subtle contrast */
+    border-radius: 20px;
+    /* Rounded edges for a friendly look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #87ceeb;
+    /* Dashed divider for a playful feel */
+    padding-bottom: 10px;
+}
+
+.id {
+    font-size: 0.9rem;
+    color: #4682b4;
+    /* Slightly darker blue for contrast */
+    font-weight: bold;
+}
+
+.name {
+    font-size: 1.6rem;
+    color: #333;
+    /* Dark text for good readability */
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.type {
+    font-size: 1rem;
+    color: #5ba450;
+    /* Gentle green for type text */
+    margin: 15px 0;
+    text-transform: capitalize;
+}
+
+.stats {
+    background: #ffffff;
+    /* Clean white background for stats */
+    border: 1px solid #e0e0e0;
+    /* Subtle gray border */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    /* Slightly smaller text */
+}
+
+.stats h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2e4053;
+    /* Dark blue-gray for strong headings */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.stats p {
+    margin: 5px 0;
+    color: #555;
+    /* Medium gray for readability */
+    font-weight: 500;
+}

@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #ffcc00;
+    /* Inspired by Pikachu's colors */
+    border: 4px solid #3b4cca;
+    /* Blue border like Pokémon Blue */
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.title {
+    font-family: 'Press Start 2P', cursive;
+    /* Pixel-style font for retro effect */
+    font-size: 2.5rem;
+    color: #2a75bb;
+    /* Pokémon Blue-inspired text color */
+    text-shadow: 2px 2px #ff0000;
+    /* Red shadow for Pokémon Red homage */
+    margin: 0;
+}
+
+.title span {
+    color: #ff0000;
+    /* Pokémon Red-inspired color for "GEN 1" */
+    text-shadow: 2px 2px #2a75bb;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
