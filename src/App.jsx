@@ -10,7 +10,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredPokedex = pokedex.filter((pokemon) => {
-    return pokemon.name.english.toLowerCase().includes(searchQuery.toLowerCase());
+    return pokemon.name.english.toLowerCase().startsWith(searchQuery.toLowerCase());
   });
 
 
