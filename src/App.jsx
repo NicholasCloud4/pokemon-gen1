@@ -4,13 +4,17 @@ import pokedex from "./pokedex.json";
 import "./App.css";
 import Search from "./components/Search";
 import { useState } from "react";
+import FilterButton from "./components/FilterButton";
 
 function App() {
 
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedType, setSelectedType] = useState("");
 
   const filteredPokedex = pokedex.filter((pokemon) => {
-    return pokemon.name.english.toLowerCase().startsWith(searchQuery.toLowerCase());
+    const matchesSearch = pokemon.name.english.toLowerCase().startsWith(searchQuery.toLowerCase());
+    const matchesType = selectedType ? pokemon.type.includes(selectedType) : true;
+    return matchesSearch && matchesType;
   });
 
 
@@ -29,6 +33,7 @@ function App() {
   return (
     <>
       <Header />
+      <FilterButton onTypeSelect={setSelectedType} />
       <Search onSearch={setSearchQuery} />
       <div className={"pokemon-grid"}>
         {pokedexMap}
