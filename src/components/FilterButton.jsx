@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./FilterButton.module.css"
 
 export default function FilterButton({ onTypeSelect }) {
 
@@ -31,7 +32,7 @@ export default function FilterButton({ onTypeSelect }) {
     return (
         <>
             {types.map((type) => (
-                <button key={type} value={type} onClick={handleFilterClick}>
+                <button className={style.button} key={type} value={type} onClick={handleFilterClick}>
                     {type}
                 </button>
             ))}
