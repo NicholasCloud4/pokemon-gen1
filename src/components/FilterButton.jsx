@@ -22,6 +22,7 @@ export default function FilterButton({ onTypeSelect }) {
         'Dragon',
         'Fairy',
         'Ghost',
+        ""
     ];
 
     function handleFilterClick(event) {
@@ -33,7 +34,7 @@ export default function FilterButton({ onTypeSelect }) {
         <>
             {types.map((type) => (
                 <button className={style.button} key={type} value={type} onClick={handleFilterClick}>
-                    {type}
+                    {type === "" ? "Show All" : type}
                 </button>
             ))}
 
